@@ -11,7 +11,16 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        
       },
+      filter: {
+        brightness: {
+          75: "0.75"
+        }
+      },
+      scale: {
+        "250": "2.5"
+      }
     },
   },
   plugins: [],

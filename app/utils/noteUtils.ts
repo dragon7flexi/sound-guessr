@@ -42,7 +42,7 @@ export function playNote(note: string) {
         oscillator.start(); // 音を再生開始
         
         // 指定した時間後に音を停止
-        oscillator.stop(audioContext.currentTime + 1); // 1秒間再生
+        oscillator.stop(audioContext.currentTime + 0.5); // 1秒間再生
     } else {
         console.warn("Invalid note:", note);
     }
