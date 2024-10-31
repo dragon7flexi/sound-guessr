@@ -1,9 +1,10 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import LinkButton from "../components/LinkButton";
 
-export default function ResultContent() {
+function ResultContentInner() {
     const searchParams = useSearchParams();
     const incorrectCnts = searchParams.get("incorrectCnts");
 
@@ -22,5 +23,13 @@ export default function ResultContent() {
             <LinkButton href="/">トップページへ戻る</LinkButton>
             <LinkButton href="/lesson">もう一度</LinkButton>
         </div>
+    );
+}
+
+export default function ResultContent() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ResultContentInner />
+        </Suspense>
     );
 }
