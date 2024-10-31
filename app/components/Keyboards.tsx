@@ -6,7 +6,7 @@ interface KeyBoardsProps {
 
 export default function KeyBoards({ setUserAnswer }: KeyBoardsProps) {
     return (
-        <div className="flex flex-col items-center relative scale-250">
+        <div className="flex flex-col items-center relative scale-100">
             {/* 白鍵 */}
             <div className="flex">
                 <KeyboardButton isWhiteKey={true} pitch="C" setUserAnswer={setUserAnswer} />
